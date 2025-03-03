@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  // Primary Colors
+  --color-primary: #4361ee;
+  --color-primary-light: #4895ef;
+  --color-primary-dark: #3f37c9;
+  
+  // Blue & Dark Variations
+  --color-dark-50: #1a1f2d;
+  --color-dark-100: #151923;
+  --color-dark-200: #0f172a;
+  --color-dark-300: #0d1424;
+  --color-blue-100: #edf2ff;
+  --color-blue-200: #c7d2fe;
+  --color-blue-300: #4895ef;
+  --color-blue-400: #4361ee;
+  --color-blue-500: #3f37c9;
+  
+  // Section Colors
+  --section-primary: var(--color-dark-50);
+  --section-alternate: var(--color-dark-100);
+  --text-primary: var(--color-blue-100);
+  --text-secondary: var(--color-blue-200);
+  
+  // UI Elements
+  --scrollbar-thumb: var(--color-blue-400);
+  --scrollbar-track: var(--color-dark-200);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--section-primary);
+  color: var(--text-primary);
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+// Scrollbar styles
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 100px;
+  background-color: var(--scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: var(--scrollbar-thumb);
+  border: 2px solid var(--scrollbar-track);
+}
+
+// Typography
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a, p {
+  font-family: 'Mulish', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+}
+
+// Layout
+.container {
+  margin: 0 auto;
+  max-width: 1070px;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+// Section styles with alternating colors
+section {
+  padding: 6rem 0;
+  transition: all 0.3s ease;
+
+  // Hero section (first section)
+  &.hero {
+    background-color: var(--section-primary);
+    background-image: 
+      radial-gradient(at 40% 20%, rgba(72, 149, 239, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(67, 97, 238, 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgba(63, 55, 201, 0.15) 0px, transparent 50%);
+  }
+
+  // About section
+  &.about {
+    background-color: var(--section-alternate);
+    background-image: 
+      radial-gradient(at 60% 80%, rgba(72, 149, 239, 0.12) 0px, transparent 50%);
+  }
+
+  // Skills section
+  &.skills {
+    background-color: var(--section-primary);
+    background-image: 
+      radial-gradient(at 20% 30%, rgba(72, 149, 239, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 70%, rgba(67, 97, 238, 0.15) 0px, transparent 50%);
+  }
+
+  // Projects section
+  &.projects {
+    background-color: var(--section-alternate);
+    background-image: 
+      radial-gradient(at 40% 60%, rgba(72, 149, 239, 0.12) 0px, transparent 50%);
+  }
+
+  // Contact section
+  &.contact {
+    background-color: var(--section-primary);
+    background-image: 
+      radial-gradient(at 60% 40%, rgba(72, 149, 239, 0.15) 0px, transparent 50%);
+  }
+}
+
+// Responsive adjustments
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0px 20px;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0px 15px;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}

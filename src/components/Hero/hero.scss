@@ -1,0 +1,163 @@
+@import '../../../src/app/styles/mixin';
+
+.hero {
+  min-height: 100vh;
+    display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem 0;
+
+  @media (max-width: 768px) {
+    padding-top: 6rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 3.5rem;
+      }
+
+      .wave {
+        display: inline-block;
+        animation: wave 2.5s infinite;
+        transform-origin: 70% 70%;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+
+      @media (min-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    a {
+      color: #4b5563;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #3b82f6;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .tech-stack {
+    text-align: center;
+
+    p {
+      color: #6b7280;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    .tech-icons {
+        display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .tech-icon {
+        width: 40px;
+        height: 40px;
+        transition: all 0.3s ease;
+
+        @media (min-width: 768px) {
+          width: 50px;
+          height: 50px;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        &.html { color: #E34F26; }
+        &.css { color: #1572B6; }
+        &.javascript { color: #F7DF1E; }
+        &.react { color: #61DAFB; }
+        &.nextjs { color: #000000; }
+        &.typescript { color: #3178C6; }
+      }
+    }
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .hero {
+    background-color: #111827;
+
+    .hero-text {
+      h1 {
+        color: #f9fafb;
+      }
+
+      p {
+        color: #d1d5db;
+      }
+    }
+
+    .social-links a {
+      color: #d1d5db;
+
+      &:hover {
+        color: #60a5fa;
+      }
+    }
+
+    .tech-stack {
+      p {
+        color: #9ca3af;
+      }
+
+      .tech-icons {
+        .tech-icon {
+          &.nextjs { color: #ffffff; }
+        }
+      }
+        }
+    }
+}
