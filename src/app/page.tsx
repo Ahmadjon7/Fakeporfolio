@@ -1,5 +1,5 @@
 import React from "react"
-import Hero from "@/components/Hero/hero"
+import Hero from "@/components/Hero/Hero"
 import './styles/globals.scss'
 import About from "@/components/About/about"
 import Projects from "@/components/Projects/projects"
