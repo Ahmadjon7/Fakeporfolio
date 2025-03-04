@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import './hero.scss'
+import './Hero.scss'
 import { FaGithub, FaLinkedinIn, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa'
 import { SiJavascript, SiTypescript, SiNextdotjs } from 'react-icons/si'
 import { motion } from 'framer-motion'
