@@ -38,7 +38,8 @@ const About = () => {
     'Figma',
     'npm/yarn',
     'Webpack',
-    'Terminal'
+    'Terminal',
+    'Postman',
   ]
 
   const stats = [
