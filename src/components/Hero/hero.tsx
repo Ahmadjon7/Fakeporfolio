@@ -30,7 +30,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Hi, I'm Ahmadjon Karimov. A passionate Front-end React Developer based in Tashkent, Uzbekistan 📍
+              Hi, I&apos;m Ahmadjon Karimov. A passionate Front-end React Developer based in Tashkent, Uzbekistan 📍
             </motion.p>
 
             <motion.div 

@@ -62,7 +62,7 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
         >
           <h2>My Skills</h2>
-          <p>Technologies I've been working with</p>
+          <p>Technologies I&apos;ve been working with</p>
         </motion.div>
 
         <motion.div

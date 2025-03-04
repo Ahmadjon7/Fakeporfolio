@@ -94,7 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
         <div className="sidebar-footer">
           <p className="footer-text">
-            Let's build something amazing together
+            Let&apos;s build something amazing together
           </p>
         </div>
       </aside>
